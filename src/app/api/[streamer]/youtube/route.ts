@@ -1,5 +1,5 @@
 import empty from "@/lib/empty";
-import { ImageResponse, NextRequest, NextResponse } from "next/server";
+import { type NextRequest, NextResponse } from "next/server";
 
 const accessibilityLive = `accessibility:{accessibilityData:{label:LIVE}}`;
 
@@ -15,6 +15,7 @@ export async function GET(
       html = html.replaceAll(/\s|"|'/g, "");
       const isLive = html.includes(accessibilityLive);
       if (isLive) {
+        // Youtube logo brought from official Youtube logo
         return new NextResponse(
           `<svg viewBox="0 0 28 20" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
           <g>
