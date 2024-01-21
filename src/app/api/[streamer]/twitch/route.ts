@@ -5,6 +5,8 @@ export async function GET(
   _request: NextRequest,
   { params: { streamer } }: { params: { streamer: string } }
 ) {
+  streamer = streamer.toLowerCase();
+
   try {
     await fetch(
       `https://static-cdn.jtvnw.net/previews-ttv/live_user_${streamer}-80x45.jpg`,

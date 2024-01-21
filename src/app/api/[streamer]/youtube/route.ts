@@ -7,6 +7,8 @@ export async function GET(
   _request: NextRequest,
   { params: { streamer } }: { params: { streamer: string } }
 ) {
+  streamer = streamer.toLowerCase();
+
   try {
     let html = await fetch(`https://www.youtube.com/@${streamer}`).then(
       (response) => response.text()
