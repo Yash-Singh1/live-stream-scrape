@@ -14,7 +14,7 @@ Returns a Twitch logo if the streamer is live, otherwise returns an empty image.
 
 Returns a Youtube logo if the streamer is live, otherwise returns an empty image.
 
-## Image Caching Circumvention
+## Image Caching Workaround
 
 The best way to get around image caching when using something like AppLab is to simply add a redundant query parameter to your image. This ensures your cache key is unique every single time:
 
